@@ -5,75 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shashank Tumuluri</title>
   <meta name="description" content="Hardware and digital design engineer working on design verification, RTL, FPGA and AI for hardware.">
+  <meta name="theme-color" content="#0a0a0c">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
 
-  <header>
+<main id="top">
+
+  <header class="hero">
     <h1>Shashank Tumuluri</h1>
-    <p class="lead">Hardware and digital design engineer working on design verification, RTL, FPGA and AI for hardware. Final-year ECE student at CBIT Hyderabad.</p>
+    <p class="lead">Hardware and digital design engineer working on design verification, RTL, FPGA and AI for hardware. Final year ECE student at CBIT Hyderabad.</p>
+
     <dl class="facts">
       <div><dt>now</dt><dd>AI Research Intern, Copperhead</dd></div>
       <div><dt>focus</dt><dd>Design verification, RTL, FPGA, AI for EDA</dd></div>
       <div><dt>location</dt><dd>Bengaluru, India</dd></div>
     </dl>
-    <p><a href="resume.pdf">Resume</a></p>
+
+    <p class="actions">
+      <a class="button" href="mailto:tumulurishashank277@gmail.com">Email me</a>
+      <!-- Add this link once resume.pdf is in the repo:
+      <a class="button ghost" href="resume.pdf">Resume</a> -->
+    </p>
   </header>
 
   <section id="experience">
     <h2>Experience</h2>
 
-    <article>
-      <h3>AI Research Intern, Copperhead</h3>
-      <p class="meta">Bengaluru &middot; Sep 2026 – present</p>
-      <p>Part of the founding team. Building Copperhead's internal pipeline and exploring funding and contract opportunities.</p>
+    <article class="row">
+      <div class="logo logo-dark"><img src="images/copperhead.png" alt="Copperhead logo"></div>
+      <div class="body">
+        <div class="head">
+          <h3>Copperhead</h3>
+          <p class="date">Sep 2026 to present</p>
+        </div>
+        <p class="role">AI Research Intern, part of the core team</p>
+        <p>Part of the core team at Copperhead, working on internal pipelines and exploring funding and contract opportunities.</p>
+        <p class="about">Copperhead is an open source hardware design agent that produces validated KiCad artifacts from a product brief.</p>
+      </div>
     </article>
 
-    <article>
-      <h3>Design Verification Intern, Tessolve Semiconductors</h3>
-      <p class="meta">Bengaluru &middot; Jun 2026 – Sep 2026</p>
-      <p>Worked on digital design with Verilog, SystemVerilog and UVM (basics). Built an agentic RTL-to-GDS system for chip design automation and productivity improvement.</p>
+    <article class="row">
+      <div class="logo logo-light"><img src="images/tessolve.png" alt="Tessolve logo"></div>
+      <div class="body">
+        <div class="head">
+          <h3>Tessolve Semiconductors</h3>
+          <p class="date">Jun 2026 to Sep 2026</p>
+        </div>
+        <p class="role">Design Verification Intern, Bengaluru</p>
+        <p>Worked on digital design with Verilog, SystemVerilog and UVM (basics). Built an agentic RTL to GDS system for chip design automation and productivity improvement.</p>
+      </div>
     </article>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
 
-    <article>
-      <h3>RTL-to-GDS Agent</h3>
-      <p>A multi-agent workflow that takes a natural-language chip spec through RTL generation, simulation and fixing, synthesis, static timing analysis and physical design to GDSII, using open-source EDA tools. Demonstrated on small benchmark designs; more protocol blocks are still in progress.</p>
-      <p class="tags">LangGraph, cocotb, Yosys, OpenSTA, OpenLane, Python</p>
-      <p class="links"><a href="https://github.com/ShashankT-ECE/rtl2gds-agent">Source</a></p>
+    <article class="project">
+      <div class="head">
+        <h3>RTL to GDS Agent</h3>
+        <p class="links"><a href="https://github.com/ShashankT-ECE/rtl2gds-agent">Source</a></p>
+      </div>
+      <p>A multi agent workflow that takes a natural language chip spec through RTL generation, simulation and fixing, synthesis, static timing analysis and physical design to GDSII, using open source EDA tools. Demonstrated on small benchmark designs, with more protocol blocks still in progress.</p>
+      <ul class="tags"><li>LangGraph</li><li>cocotb</li><li>Yosys</li><li>OpenSTA</li><li>OpenLane</li><li>Python</li></ul>
     </article>
 
-    <article>
-      <h3>CNN FPGA Accelerator</h3>
-      <p>An FPGA-based CNN accelerator with a reconfigurable dataflow architecture and sparsity skipping. Under development; hardware testing remains.</p>
-      <p class="tags">FPGA, SystemVerilog, hardware acceleration, sparse computation</p>
-      <p class="links"><a href="https://github.com/ShashankT-ECE/cnn-accelerator">Source</a></p>
+    <article class="project">
+      <div class="head">
+        <h3>CNN FPGA Accelerator</h3>
+        <p class="links"><a href="https://github.com/ShashankT-ECE/cnn-accelerator">Source</a></p>
+      </div>
+      <p>An FPGA based CNN accelerator with a reconfigurable dataflow architecture and sparsity skipping. Under development, with hardware testing still to do.</p>
+      <ul class="tags"><li>FPGA</li><li>SystemVerilog</li><li>Hardware acceleration</li><li>Sparse computation</li></ul>
     </article>
 
-    <article>
-      <h3>Solar Surfers</h3>
-      <p>Winner, Smart India Hackathon 2025 (Hardware Edition). An automated mine dewatering system: a mine unit and an admin unit talk over LoRa, monitor water level, flow and turbidity, and control the pump and dosing pump automatically or manually, with safety alerts and optional cloud monitoring.</p>
-      <p class="tags">ESP32, LoRa, embedded C++, sensors, motor drivers</p>
-      <p class="links"><a href="https://github.com/ShashankT-ECE/Solar-Surfers-SIH">Source</a></p>
+    <article class="project">
+      <div class="head">
+        <h3>Solar Surfers</h3>
+        <p class="links"><a href="https://github.com/ShashankT-ECE/Solar-Surfers-SIH">Source</a></p>
+      </div>
+      <p>Winner of Smart India Hackathon 2025, Hardware Edition. An automated mine dewatering system: a mine unit and an admin unit talk over LoRa, monitor water level, flow and turbidity, and control the pump and dosing pump automatically or manually, with safety alerts and optional cloud monitoring.</p>
+      <ul class="tags"><li>ESP32</li><li>LoRa</li><li>Embedded C++</li><li>Sensors</li><li>Motor drivers</li></ul>
     </article>
 
-    <article>
-      <h3>APB Slave Verification Environment</h3>
-      <p>A transaction-based SystemVerilog verification environment for an APB slave, with a driver, monitor and scoreboard architecture.</p>
-      <p class="tags">SystemVerilog, design verification, APB, testbench development</p>
+    <article class="project">
+      <div class="head">
+        <h3>APB Slave Verification Environment</h3>
+      </div>
+      <p>A transaction based SystemVerilog verification environment for an APB slave, built around a driver, monitor and scoreboard architecture.</p>
+      <ul class="tags"><li>SystemVerilog</li><li>Design verification</li><li>APB</li><li>Testbench development</li></ul>
     </article>
   </section>
 
   <section id="achievements">
     <h2>Achievements</h2>
-    <ul>
+    <ul class="marks">
       <li>Winner, Smart India Hackathon 2025 (Hardware Edition)</li>
       <li>Winner, National AI + FPGA Hackathon 2026</li>
       <li>First author, research paper under submission</li>
@@ -85,27 +114,31 @@
     <dl class="skills">
       <div><dt>Digital design and verification</dt><dd>Digital system design, Verilog, SystemVerilog, UVM, RTL design, design verification, functional verification, APB, testbench development</dd></div>
       <div><dt>FPGA and hardware</dt><dd>FPGA, Zynq UltraScale+ SoC, hardware acceleration, reconfigurable computing</dd></div>
-      <div><dt>VLSI and EDA</dt><dd>RTL-to-GDS, EDA automation, open-source EDA, synthesis, static timing analysis, physical design flow</dd></div>
+      <div><dt>VLSI and EDA</dt><dd>RTL to GDS, EDA automation, open source EDA, synthesis, static timing analysis, physical design flow</dd></div>
       <div><dt>PCB</dt><dd>KiCad, PCB design, PCB design automation, EDA workflow automation</dd></div>
-      <div><dt>Software and AI</dt><dd>Python, C++ (basics), Linux, Git, workflow automation, multi-agent systems, LLM agents, LangGraph, MCP, AI for EDA</dd></div>
+      <div><dt>Software and AI</dt><dd>Python, C++ (basics), Linux, Git, workflow automation, multi agent systems, LLM agents, LangGraph, MCP, AI for EDA</dd></div>
     </dl>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <article>
-      <h3>Chaitanya Bharathi Institute of Technology, Hyderabad</h3>
-      <p class="meta">B.E. Electronics and Communication Engineering &middot; graduating 2027 &middot; CGPA 9.17 / 10</p>
+    <article class="row">
+      <div class="logo logo-light"><img src="images/cbit.png" alt="CBIT logo"></div>
+      <div class="body">
+        <div class="head">
+          <h3>Chaitanya Bharathi Institute of Technology, Hyderabad</h3>
+          <p class="date">Graduating 2027</p>
+        </div>
+        <p class="role">B.E. Electronics and Communication Engineering</p>
+        <p>CGPA 9.17 out of 10.</p>
+      </div>
     </article>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Open to design verification, RTL and FPGA roles, and to conversations about AI for hardware.</p>
-    <p class="links">
-      <a href="mailto:tumulurishashank277@gmail.com">tumulurishashank277@gmail.com</a>
-      <a href="tel:+919390645308">+91 93906 45308</a>
-    </p>
+    <p class="mail"><a href="mailto:tumulurishashank277@gmail.com">tumulurishashank277@gmail.com</a></p>
     <p class="links">
       <a href="https://github.com/ShashankT-ECE">GitHub</a>
       <a href="https://www.linkedin.com/in/shashank-tumuluri">LinkedIn</a>
@@ -115,5 +148,14 @@
   </section>
 
 </main>
+
+<nav class="dock" aria-label="Quick links">
+  <a href="#top">Top</a>
+  <a href="https://github.com/ShashankT-ECE">GitHub</a>
+  <a href="https://www.linkedin.com/in/shashank-tumuluri">LinkedIn</a>
+  <a href="https://x.com/ShashankT_17">X</a>
+  <a href="https://hashnode.com/@tshashank">Blog</a>
+</nav>
+
 </body>
 </html>
